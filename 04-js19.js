@@ -90,3 +90,5 @@ for (var i = 2; i <= 10000; i++) {
         console.log(i);
     }
 }
+
+// for(){}
