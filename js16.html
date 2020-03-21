@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button id="btn">确定</button>
+    <script>
+        var btn = document.getElementById('btn');
+        var txt = document.getElementById('txt');
+        btn.onclick = function() {
+            var num = Number(txt.value);
+            var g = num % 10;
+            var s = parseInt(num / 10) % 10;
+            var b = parseInt(num / 100);
+            if (Math.pow(g, 3) + Math.pow(s, 3) + Math.pow(b, 3) == num) {
+                console.log('是')
+            } else {
+                console.log('不是');
+            }
+        }
+    </script>
+</body>
+
+</html>

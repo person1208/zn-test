@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt"><button id='btn'>确定</button>
+    <script>
+        var txt = document.getElementById('txt');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            var num = Number(txt.value);
+            if (num >= 18 && num <= 70) {
+                alert('OK')
+            } else {
+                alert('NO!')
+            }
+        }
+    </script>
+</body>
+
+</html>

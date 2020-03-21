@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">点我</button>
+    <div id="changeBg"></div>
+
+    <script>
+        var btn = document.getElementById('btn');
+        var box = document.getElementById('changeBg');
+        btn.onclick = function() {
+            box.style.backgroundColor = 'blue'
+        }
+    </script>
+</body>
+
+</html>

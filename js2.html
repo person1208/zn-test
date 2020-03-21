@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="red">红</button>
+    <button id="green">绿</button>
+    <button id="blue">蓝</button>
+    <br>
+    <div id="box"></div>
+    <script>
+        var red = document.getElementById('red');
+        var green = document.getElementById('green');
+        var blue = document.getElementById('blue');
+        var box = document.getElementById('box');
+        red.onclick = function() {
+            box.style.backgroundColor = 'red';
+        }
+        green.onclick = function() {
+            box.style.backgroundColor = 'green';
+        }
+        blue.onclick = function() {
+            box.style.backgroundColor = 'blue';
+        }
+    </script>
+</body>
+
+</html>

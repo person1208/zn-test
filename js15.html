@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+数学：<input type="text" id="shu">
+<br> 英语：<input type="text" id="ying"><br>
+<button id="btn">确定</button>
+<div id="div"></div>
+<script>
+    var shu = document.getElementById('shu');
+    var ying = document.getElementById('ying');
+    var btn = document.getElementById('btn');
+    var div = document.getElementById('div');
+    btn.onclick = function() {
+        div.innerHTML = "";
+        // if (shu.value >= 80) {
+        //     console.log('得到苹果手机');
+        // } else if (ying.value >= 90) {
+        //     console.log('得到笔记本电脑');
+        // } else if (shu.value < 80 && ying.value < 90) {
+        //     console.log('挨打');
+        // }   这是错误的写法
+        var shu_score = Number(shu.value);
+        var ying_score = Number(ying.value);
+        if (shu_score >= 80) {
+            div.innerHTML = '小明将得到苹果手机';
+        }
+        if (ying_score >= 90) {
+            div.innerHTML += '小明将得到笔记本电脑';
+        }
+        if (shu_score < 80 && ying_score < 90) {
+            div.innerHTML = '小明将挨打';
+        }
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

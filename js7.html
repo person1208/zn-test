@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    体重：<input type="text" id='txt1'> 身高：<input type="text" id='txt2'>
+    <button id="btn">求值</button>
+    <div id="div"></div>
+    <script>
+        var txt1 = document.getElementById('txt1');
+        var txt2 = document.getElementById('txt2');
+        var btn = document.getElementById('btn');
+        var div = document.getElementById('div');
+        btn.onclick = function() {
+            var tizhong = Number(txt1.value);
+            var shengao = Number(txt2.value);
+            var BMI = tizhong / Math.pow(shengao, 2);
+            div.innerHTML = BMI;
+        }
+    </script>
+</body>
+
+</html>

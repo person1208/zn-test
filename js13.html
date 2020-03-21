@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>身高：<input type="text" id="sg"></div>
+    <div>体重：<input type="text" id="tz"></div>
+    <button id="btn">确定</button>
+    <script>
+        var sg = document.getElementById('sg');
+        var tz = document.getElementById('tz');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            var s = Number(sg.value);
+            var t = Number(tz.value);
+            var bmi = t / Math.pow(s, 2);
+            if (bmi <= 18.5) {
+                console.log('偏瘦');
+            } else if (bmi < 25) {
+                console.log('正常');
+            } else if (bmi < 30) {
+                console.log('偏胖');
+            } else {
+                console.log('过度肥胖');
+            }
+        }
+    </script>
+</body>
+
+</html>

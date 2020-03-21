@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <button id="btn">求面积</button>
+    <div id="div"></div>
+    <script>
+        var txt = document.getElementById('txt');
+        var btn = document.getElementById('btn');
+        var div = document.getElementById('div');
+        btn.onclick = function() {
+            var bian = Number(txt.value);
+            var s = 3 * Math.sqrt(3) / 2 * Math.pow(bian, 2);
+            div.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>

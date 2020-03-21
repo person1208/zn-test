@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label><input type="radio" name="gender" id='nan'>男</label>
+    <label><input type="radio" name="gender" id='nv'>女</label>
+    <br>
+    <input type="text" id="age">
+    <br>
+    <button id="btn">判断能否结婚</button>
+    <script>
+        var nan = document.getElementById('nan');
+        var nv = document.getElementById('nv');
+        var age = document.getElementById('age');
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            var num = Number(age.value);
+            if (nan.checked) {
+                if (num >= 22) {
+                    alert('OK');
+                } else {
+                    alert('NO');
+                }
+            } else if (nv.checked) {
+                if (num >= 20) {
+                    alert('OK');
+                } else {
+                    alert('NO');
+                }
+            } else {
+                alert('请选择性别')
+            }
+        }
+    </script>
+</body>
+
+</html>

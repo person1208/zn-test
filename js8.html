@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    摄氏温度：<input type="text" id="txt">
+    <button id="btn">转华氏温度</button>
+    <div id="div"></div>
+    <script>
+        var txt = document.getElementById('txt');
+        var btn = document.getElementById('btn');
+        var div = document.getElementById('div');
+        btn.onclick = function() {
+            var hua = Number(txt.value) * 1.8 + 32;
+            div.innerHTML = hua;
+        }
+    </script>
+</body>
+
+</html>

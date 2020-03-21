@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>请问您是平日入园还是周末入园？</p>
+    <div>
+        <label><input type="radio" name="day" id="pr">平日</label>
+        <label><input type="radio" name="day" id="zm">周末</label>
+    </div>
+    <div>
+        <label>请输入成年人数量：<input type="text" id="cs"></label>
+    </div>
+    <div>
+        <label>请输入儿童数量：<input type="text" id="rs"></label>
+    </div>
+    <button id="btn">计算</button>
+    <h1 id="zong">票价总计：0元</h1>
+    <p>
+        公园的门票规则是：<br> 平日 成年人50元 儿童30元<br> 周末 成年人80元 儿童60元<br>
+
+    </p>
+    <script>
+        var pr = document.getElementById('pr');
+        var zm = document.getElementById('zm');
+        var cs = document.getElementById('cs');
+        var rs = document.getElementById('rs');
+        var btn = document.getElementById('btn');
+        var zong = document.getElementById('zong');
+        btn.onclick = function() {
+            var c = Number(cs.value);
+            var r = Number(rs.value);
+            var cs_price, rs_price;
+            if (pr.checked) {
+                // num = c * 50 + r * 30;
+                pr_price = 50;
+                rs_price = 30;
+
+            } else if (zm.checked) {
+                // num = c * 80 + r * 60;
+                pr_price = 80;
+                rs_price = 60;
+            }
+            var total = pr_price * c + rs_price * r;
+            // zong.innerHTML = '票价总计：' + num + '元';
+            zong.innerHTML = '票价总计：' + total + '元';
+        }
+    </script>
+</body>
+
+</html>
