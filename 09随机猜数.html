@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var baozha = parseInt(Math.random() * 100 + 1);
+        // var min = 1;
+        // var max = 100;
+        // while (true) {
+        //     var n = Number(prompt(`请输入${min}到${max}的一个整数`));
+
+        //     if (n >= min && n <= max) {
+        //         if (n > baozha) {
+        //             alert('偏大');
+        //             max = n - 1;
+        //         } else if (n < baozha) {
+        //             alert('偏小');
+        //             min = n + 1;
+        //         } else if (baozha == n) {
+        //             alert('恭喜');
+        //             break;
+        //         }
+        //     } else {
+        //         alert('输入的不符合要求');
+        //     }
+        // }
+
+
+        var baozha = parseInt(Math.random() * 100 + 1);
+        var min = 1;
+        var max = 100;
+        while (true) {
+            var n = Number(prompt(`请输入${min}到${max}之间的数字`));
+            if (n >= min && n <= max) {
+                if (n < baozha) {
+                    alert('偏小');
+                    min = n + 1;
+                } else if (n > baozha) {
+                    alert('偏大');
+                    max = n - 1;
+                } else if (n == baozha) {
+                    alert('OK');
+                    break;
+                }
+            } else {
+                alert('请输入指定范围的数字!')
+            }
+        }
+    </script>
+
+</body>
+
+</html>
